@@ -1,0 +1,23 @@
+<form>
+    <fieldset>
+      <legend>Cat form</legend>
+      <p><label>Name</label>
+        <input name="name" [(ngModel)]="newCat.name"></p>
+      <p><label>Age</label>
+        <input name="age" [(ngModel)]="newCat.age"></p>
+      <p><label>Breed</label>
+        <select name="breed" [(ngModel)]="newCat.breed">
+          <option value="">--choose--</option>
+          <option value="Persian">Persian</option>
+          <option value="Bengal">Bengal</option>
+          <option value="American Shorthair">American Shorthair</option>
+        </select>
+        </p>
+        <p><label>Gender</label>
+          <input type="radio" name="gender" value="male" [(ngModel)]="newCat.gender"> Male<br>
+          <input type="radio" name="gender" value="female" [(ngModel)]="newCat.gender"> Female<br>
+          <input type="radio" name="gender" value="other" [(ngModel)]="newCat.gender"> Other<br>  
+        </p>
+    </fieldset>
+    <p><button (click)="save()" type="submit" name="submit" value="Save" > Save </button></p>
+  </form>
